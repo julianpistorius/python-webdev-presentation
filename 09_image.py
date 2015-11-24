@@ -16,5 +16,11 @@ while True:
     image_data = image.read()
     image.close()
 
+    headers = '''HTTP/1.1 200 OK
+Content-Type:image/jpg
+Content-Length:%d
+
+''' % len(image_data)
+    client_connection.send(headers)
     client_connection.sendall(image_data)
     client_connection.close()

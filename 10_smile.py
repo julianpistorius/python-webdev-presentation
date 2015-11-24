@@ -24,5 +24,12 @@ while True:
         time.sleep(1)  # Warm-up time
         camera.capture(byte_stream, 'jpeg')
 
+    image_data = byte_stream.getvalue()
+    headers = '''HTTP/1.1 200 OK
+Content-Type:image/jpg
+Content-Length:%d
+
+''' % len(image_data)
+    client_connection.send(headers)
     client_connection.sendall(byte_stream.getvalue())
     client_connection.close()
