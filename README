@@ -1,0 +1,19 @@
+Python web programming resources:
+---------------------------------
+http://webpython.codepoint.net/
+http://ruslanspivak.com/lsbaws-part1/
+https://docs.python.org/2/howto/webservers.html
+https://docs.python.org/2/library/wsgiref.html
+https://wsgi.readthedocs.org/en/latest/frameworks.html
+
+For CGI example:
+----------------
+http://www.johnloomis.org/python/cgiserver.html
+python -m CGIHTTPServer
+curl http://127.0.0.1:8000/cgi-bin/11_hello.py
+curl http://127.0.0.1:8000/cgi-bin/11_hello.py?name=James
+curl --data "name=John" http://127.0.0.1:8000/cgi-bin/11_hello.py
+
+POMO Ipsum:
+-----------
+http://www.elsewhere.org/pomo/

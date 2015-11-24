@@ -1,0 +1,3 @@
+parse==1.6.6
+picamera==1.10
+Flask==0.10.1
